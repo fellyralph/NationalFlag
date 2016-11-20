@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CountryFlagComponent } from './country-flag/country-flag.component';
 import { HeaderComponent } from './header.component';
+import {FlagService} from "./flag.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { HeaderComponent } from './header.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [FlagService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

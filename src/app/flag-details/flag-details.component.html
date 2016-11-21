@@ -1,0 +1,18 @@
+<div>
+  <p>Symbolism</p>
+  <ul>
+  <div *ngFor="let symbol of selectedFlagDetails.symbolism">
+    <li>
+      {{symbol.color}} : {{symbol.meaning}}
+    </li>
+  </div>
+  </ul>
+  <p>The Year of Adoption</p>
+  <div>
+    {{selectedFlagDetails.yoa}}
+  </div>
+  <p>The Designer</p>
+  <div>
+    {{selectedFlagDetails.designer}}
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Flag} from "./flag";
+import {Http, Headers} from "@angular/http";
 
 
 
@@ -17,7 +18,7 @@ export class FlagService {
 { countryName : 'Morocco',flagUrl :'https://studentaffairs.duke.edu/sites/default/files/u110/ws_Morocco_flag_1920x1080.jpg'},
 { countryName : 'Russia',flagUrl :'http://pngimg.com/upload/flags_PNG14711.png'}];
 
-constructor() { }
+constructor(private http : Http) { }
 
   getFlags(){
     return this.flagArray;
@@ -27,4 +28,19 @@ constructor() { }
     return this.getFlags().find(fl => fl.countryName === country);
   }
 
+  /*
+  storeFlags(){
+    const datas = JSON.stringify(this.flagArray);
+
+    const headers = new Headers(
+      {
+        'Content-Type' : 'application/json'
+      }
+    );
+    console.log('The flag log was called ................');
+    return this.http.put('https://nationalflag-960dc.firebaseio.com/flags.json',datas,{ headers : headers });
+
+
+
+  }*/
 }

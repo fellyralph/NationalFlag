@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlagEditComponent implements OnInit {
 
-  constructor() { }
+   numbers;
+
+
+  constructor() {
+    this.numbers = Array(5).fill(3);
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit(){
+    console.log('......submitted..........');
   }
 
 }

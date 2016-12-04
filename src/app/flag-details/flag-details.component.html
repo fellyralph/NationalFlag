@@ -1,0 +1,13 @@
+<div style="background-color: white;border-radius: 5px">
+  <p>Symbolism</p>
+ <ul>
+  <div *ngFor="let symbol of selectedFlagDetails?.symbolism">
+    <li>
+      {{symbol.color}} : {{symbol.meaning}}
+    </li>
+  </div>
+  </ul>
+  <p>The Year of Adoption :  {{selectedFlagDetails?.yoa}}</p>
+
+  <p>The Designer : {{selectedFlagDetails?.designer}}</p>
+</div>

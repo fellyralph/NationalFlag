@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="countryName">Flag's Country Name   </label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text"
+                         id="countryName">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="flagUrl">Flag's Photo URL   </label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text"
+                         id="flagUrl" #photo>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+              <div class="img">
+                <img [src]="photo.value" style="height : 300px; width: 470px">
+              </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="designer">Designer's Name   </label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text"
+                         id="designer">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="yoa">Flag's Adoption Year   </label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text"
+                         id="yoa">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Symbolism</p>
+            <div *ngFor="let num of numbers">
+              <div class="row">
+                <div class="col-md-3">
+                  <input type="text" id="symbol" placeholder="blue">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <textarea id="meaning" cols="65" rows="3"></textarea>
+                </div>
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-success">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
